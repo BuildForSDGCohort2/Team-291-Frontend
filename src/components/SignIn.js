@@ -1,26 +1,27 @@
 import React from "react";
-import {MDBRow, MDBCol, MDBInput, MDBCardFooter} from "mdbreact";
+import { MDBRow, MDBCol, MDBInput, MDBCardFooter } from "mdbreact";
 import { MDBBtn, MDBCard, MDBCardBody, MDBBox, MDBCardTitle, MDBIcon } from "mdbreact";
 import "mdbreact/dist/css/mdb.css";
+import "../Styles/SignIn.css";
 
 
 const signInForm = () => {
 
     return (
-        <div >
-
+        <div className="bg row">
+            <div className="container">
             <MDBBox display="flex" justifyContent="center" >
                 <MDBCol className="my-5" md="5">
                     <MDBCard >
                         <MDBCardBody>
-                            <MDBCardTitle><p className="h4 text-primary text-center py-4">Sign In</p></MDBCardTitle>
-                            <form className="p-4 mt-4">
+                            <MDBCardTitle><p className="h2 text-light-blue text-center py-4">Login</p></MDBCardTitle>
+                            <form>
                                 <div className="grey-text mx-2">
                                     <MDBInput
-                                        label="username or email"
+                                        hint="username or email"
                                         icon="user"
+                                        type="email"
                                         group
-                                        type="text"
                                         validate
                                         error="wrong"
                                         success="right"
@@ -28,7 +29,7 @@ const signInForm = () => {
 
 
                                     <MDBInput
-                                        label="enter your password"
+                                        hint="enter your password"
                                         icon="key"
                                         group
                                         type="password"
@@ -45,16 +46,16 @@ const signInForm = () => {
 
                                             <div className="custom-control custom-checkbox">
                                                 <input type="checkbox" className="custom-control-input"
-                                                       id="defaultChecked2" checked/>
-                                                    <label className="custom-control-label text-info" htmlFor="defaultChecked2">
-                                                        Remember Me </label>
+                                                    id="defaultChecked2"/>
+                                                <label className="custom-control-label text-light-blue " htmlFor="defaultChecked2">
+                                                    Remember Me </label>
                                             </div>
 
                                         </MDBCol>
                                         <MDBCol md="6">
-                                            <MDBBtn color="info">
-                                                sign in
-                                                <MDBIcon far icon="paper-plane" className="ml-1" />
+                                            <MDBBtn className="submitButton">
+                                                Login
+                                                <MDBIcon fas icon="sign-in-alt" className="ml-1" />
                                             </MDBBtn>
                                         </MDBCol>
                                     </MDBRow>
@@ -94,7 +95,7 @@ const signInForm = () => {
                         </MDBCardBody>
                         <MDBCardFooter className="justify-content-center font-italic text-center text-info">
                             <div>
-                                <a>I don't have an account</a>
+                                <a href>I don't have an account</a>
                             </div>
                         </MDBCardFooter>
                     </MDBCard>
@@ -104,7 +105,7 @@ const signInForm = () => {
 
             </MDBBox>
 
-
+            </div>
         </div>
     );
 };

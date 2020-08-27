@@ -69,7 +69,7 @@ const signUpForm = () => {
                         </MDBCardBody>
                         <MDBCardFooter className="justify-content-center font-italic text-center text-info">
                             <div>
-                                <a>I already have an account</a>
+                                <a href>I already have an account</a>
                             </div>
                         </MDBCardFooter>
                     </MDBCard>
